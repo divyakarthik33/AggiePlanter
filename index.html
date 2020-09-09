@@ -6,14 +6,12 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head> 
     
-<body style = "background: #C6FFDD;  /* fallback for old browsers */
+<body style = "font-family: 'Abel';background: #C6FFDD;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ">
 
 
-
-    
 <div style="display: inline-block; float: left; margin-top: 3%; margin-left: 15%; font-family: 'Abel';text-align: center;">
     
     
@@ -65,8 +63,7 @@ background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/
 </div>
 </div>   
     
-    
-    
+
 <div style="float:left;display: inline-block;margin-top: 13%; margin-left:5%;">
 <div class="w3-container">
   <button onclick="document.getElementById('id01').style.display='inline-block'" class="w3-button w3-black">Air Data</button>
@@ -126,8 +123,276 @@ background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/
 
 
 </div>
+ 
+<div style = "float:left; width: 60%; display: inline-block; margin-left: 20%; margin-right: 20%; margin-top:5%; text-align: center;"> 
+    <h2>About Aggie Planter</h2>
+    <p>Our goal was to design a product that would be practical and well rounded in software and hardware functionality. As UCD Aggies, we were driven toward projects that had to do with sustainability and reusability, which is what led us to building the AggiePlanter. The AggiePlanter can be used by passionate gardeners, curious scientists, or anyone who just wants a bite of fresh produce. AggiePlanter allows users to monitor the health of their plants and make changes accordingly to ensure the plant is thriving, it comes with an automatic watering system as well, for the lazy Aggies out there.</p>
+    <br>
+    <br>
+    <h4 style="text-align-last: center;">Features</h4>
+    <p style="text-align-last: center;">Live remote monitoring for plant health via a website. <br>
+        Live OLED display on plant for monitoring  <br>
+        Automatic plant watering system (based on user input) <br>
+        Switch Controlled Watering <br>
+    </p>
+    
+    <br>
+    <br>
+    
+    
+    
+    
+    
+    <br>
+    <br>
+    <br>
+    
+
+    
+    
+    
+    
+
+
+
+
+ 
+
+
+    </div>
+    
+<div style = "width:80%; margin-right:10%; margin-left: 10%;  display: inline-block;">
+    
+    
+<img src ="plant.png" style = "height: 500px; float:left; margin-left: 18%;">  
+<video width="320" height="240" controls style ="float:left;display: inline-block; margin-left:5%;">
+    <source src="Plant.mp4" type="video/mp4">
+</video>
+    
+    
+<div style = "float: right; margin-top: 3%; margin-right: 13%; margin-bottom:15%;">
+    
+<div class="w3-container">
+  <button onclick="document.getElementById('id06').style.display='inline-block'" class="w3-button w3-black" style = "width:280px;"> H A R D W A R E </button>
+  <div id="id06" class="w3-modal">
+    <div class="w3-modal-content" style="width:65%;">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h3 style="margin:30px;">Implementation : Hardware</h3>
+    
+        <img src = "tempair.PNG" style = "width: 300px; margin:10%; display:inline-block;float:left;">
+        <div style="width:90%;margin: 5%; display: block;">
+        <h6 style="text-align-last: right;">Temperature and Air Humidity Sensor</h6>
+        <p style="width:40%;font-size: 12px;text-align: right;float: right;">A DHT11 sensor module is used to gather temperature and air humidity data. DHT11 uses a single line serial communication to communicate with the CC3200 Launchpad. In order to start communication with DHT11 the data pin is pulled low for at least 18ms and then pulled high for 20-40us. After the start signal is sent, the GPIO pin is set to input mode and sensor data is read using GPIO interrupts and the SysTick timer. DHT11 uses a similar encoding system used in the TV remote from Lab 3. Pulses of 26-28us are 0s and pulses of 70us are 1s. DHT11 sends 40 bits of data to the CC3200 Launchpad. The first 16 bits are humidity values, the second 16 bits are temperature values and the last 8 bits are check sum.</p>
+        </div>
+        
+        <br>
+        <br>
+
+
+        <div style="width:90%; margin: 5%;display: inline-block;">
+        <h6 style="text-align-last: left;">Soil Moisture Sensor</h6>
+        <p style="width:40%;font-size: 12px;text-align: left;float: left;">YL-69/YL-38 soil moisture sensor modules are used to detect the moisture of the soil. YL-69 module is inserted into the soil and it detects the moisture level by measuring the resistance between its two sides. YL-38 module contains the circuitry to detect the resistance between the YL-69 prongs and converts the value into an analog DC signal. The output of the YL-38 module is connected to a MCP3001 ADC IC. CC3200 Launchpad connects to the ADC to read sensor data using SPI.</p>
+        <img src = "soilmoist.PNG" style = "width: 350px; margin:5%; display:inline-block; float:right;">
+         </div>
+          <br><br>
+          
+
+
+
+        <div style="width:90%; display: inline-block; margin: 5%;">
+        <img src = "lightsensor.PNG" style = "width: 300px; margin-left: 10%; display:inline-block;float:left;">
+        <h6 style="text-align-last: right;">Light Intensity Sensor</h6>
+
+        <p style="width:30%;font-size: 12px;text-align:right;float: right;">A light dependant resistor (LDR) is used to detect the light intensity. The analog output of the LDR is connected to a MCP3001 ADC IC. CC3200 Launchpad connects to the ADC to read sensor data using SPI.</p>
+
+        </div>
+
+        <br>
+        <br>
+
+
+
+        <div style="width:90%;margin: 5%; inline-block;  float:left;">
+        <h6 style="text-align-last: left;">Watering System</h6>
+     
+            <p style="width:90%;font-size: 12px;text-align:left;float: left;display: inline-block;margin: 5%">We designed a peristaltic pump using  3D Printer to deliver water to the plants. Peristaltic pumps work by squeezing a soft tube to create a soft vacuum. This vacuum causes the water to move in whatever direction the pump spins. The pump has 3 main components:</p>
+            
+            
+            <p style=" width:90%;margin: 5%; font-size: 12px;text-align:center;float: left;display: inline-block;"><B>Outer Pump</B><br>This part creates a surface where the soft tube can be pressed into. It is a large cylinder with an opening to allow the input and output tubes to enter and exit. The outer pump is screwed into the body of the stepper motor.</p>
+            
+             <img src = "opump.PNG" style="width:300px;display: inline-block;margin-left: 30%;">
+            
+           
+     
+
+       
+            <p style="width:90%;margin: 5%;font-size: 12px;text-align:center;float: left; display: inline-block;"><B>Inner Pump (right)</B><br>This part contains 3 ball bearings and is attached to the rotor. It spins to create a vacuum inside the soft tube.</p>
+     
+            <img src = "inpump.PNG" style="width:340px;padding: 50px; display: inline-block;margin-left: 25%;">
+        
+            <p style="width:90%;margin: 5%; font-size: 12px;text-align:center;float: left; display: inline-block;"><B>Silicone Tube</B><br>A silicone tube is used to move the water from the container to the plant. The tube is placed between the inner and outer pump parts. Silicone tubes have excellent flexibility and are soft enough to be used in a peristaltic pump.</p>
+            
+           
+            
+        <br>
+
+            
+         
+                <p style="width:100%;font-size: 12px;text-align:left;float: left; display: inline-block;">
+                     <br>
+                    
+                <B>Stepper Motor: </B>To run the pump a stepper motor is used. Stepper motors are powerful and have precise control due to the way they operate. It delivers enough power to be able run the peristaltic pump.
+        <br><br>
+                <B>Stepper Motor Driver:</B> We used a DRV8834 Stepper Motor Driver circuit to control the motor. It needs 2 signals from the CC3200 Launchpad to operate. The DIR pin on the driver controls the direction of the stepper motor while the STEP function controls the movement. Each time a pulse is sent to the STEP pin, the motor moves 1 step. The speed of the motor can be controlled by changing the pauses between each step signals and the amount of rotation can be controlled with the number of step pulses sent.
+            </p>
+            <br>
+            
+            <img src = "motor.png" style = "margin-left: 30%; margin-top: 5%; width: 300px;">
+    
+        </div>
+
+
+         
+    
+        <div style="width:100%; display: inline-block;">
+        <h6 style="text-align-last: left;">OLED</h6>
+        <p style="width:40%;font-size: 12px;text-align:left;float: left; display: inline-block;">The OLED (attached to plant) is used to show users live values of data when they are in physical proximity to the plant. The OLED refreshes as any of the plant’s attributes fluctuate. </p>
+        </div>
+        <p style = "display:inline-block; text-align: right; font-size: 20px;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+    <br>
+<div class="w3-container">
+  <button onclick="document.getElementById('id05').style.display='inline-block'" class="w3-button w3-black" style = "width:280px;">s o f t w a r e</button>
+  <div id="id05" class="w3-modal">
+    <div class="w3-modal-content" style="width:65%;">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+ <h3 style="text-align: right; margin-top:40px;">Implementation : Software</h3>
+    
+        <div style="width:40%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS IoT Core</h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">This AWS service is the main connection point between AWS and the  “IoT thing”, the LaunchPad.</p>
+             
+        </div>
+         <img src = "shadowstate.PNG" style = "width:35%; float: right; display: inline-block;">
+    
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS S3</h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">We utilized AWS S3 to store the files for our front-end, the website. We used one webpage (index.html), and a javascript supporting file that was updated to reflect the live values of the plant.</p>
+        </div>
+          
+        
+    
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS Lambda</h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">AWS Lambda was extremely useful to us since we integrated several services. Lambda is a service that uses code to connect services. Since we used python, we used the boto3 library to call libraries for AWS services. We had two Lambda functions, processPlant and updatePlant. The function updatePlant, is triggered when LaunchPad sends live values for our plant to the IoT shadow and accordingly updates our website. The function processPlant(), is triggered when the user updates the way they want their plant to be watered, and updates the IoT shadow to modify the functioning of the LaunchPad.</p>
+        </div>
+          
+          <img src = "lambda.PNG" style = "width:45%; float: right;display: inline-block;">
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS API Gateway</h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">API Gateway was utilized to send the user inputted data from the website, to an endpoint, from where it was sent to our Lambda Function, processPlant().</p>
+        </div>
+          
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS DynamoDB</h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">DynamoDB was utilized for data collection for the plant's monitored attributes.</p>
+        </div>
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS Identity Access Management (IAM) </h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">IAM was used for allotting secure and controlled access to each AWS service to access other AWS services. </p>
+        </div>
+          
+          <img src = "dynamodb.PNG" style = "width:40%; float: right;display: inline-block;">
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS CloudWatch  </h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">CloudWatch was used to monitor the efficiency of two functions and ensure services were performing as expected. </p>
+        </div>
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS SageMaker </h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">SageMaker was used to enhance our UI by adding plot visualizations of our plant data. Within Sagemaker we used Jupyter Notebooks to run MATLAB commands and produce visualization plots.</p>
+        </div>
+          
+          <img src = "text.PNG" style = "width:40%; float: right;display: inline-block;">
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">AWS SNS (Simple Notification Service) </h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">SNS used to notify users that their plant has been watered. Triggered when watering command posted to shadow from Launchpad.</p>
+        </div>
+    
+    
+        <div style="width:50%; display: inline-block;">
+        <h6 style="text-align-last: left;">Code Composer Studio Code (CCS) </h6>
+        <p style="width:100%;font-size: 12px;text-align: left;float: left;">Code in CCS controlled the activity of our LaunchPad, including monitoring of pins, running the sensors and the water pump. CCS also included code to connect to AWS.</p>
+        </div>
+        <p style = "display:inline-block; text-align: right; font-size: 20px;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+    <br>
+<div class="w3-container">
+  <button onclick="document.getElementById('id07').style.display='inline-block'" class="w3-button w3-black" style = "width:280px;">discussion </button>
+  <div id="id07" class="w3-modal">
+    <div class="w3-modal-content" style="width:65%;">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id07').style.display='none'" class="w3-button w3-display-topright"  >&times;</span>
+<h3 style="text-align: left; margin-top:5%;margin-left:5%;">Discussion</h3> 
+<p style="padding:5%; font-size: 14px;">This lab utilizes a variety of components and software services, which calls for extensive debugging. Previous labs provided a foundation for working with LaunchPad and AWS communication, certificates, new hardware component implementation using GPIO, Logic Analyzer etc. Aspects of this project we spent time familiarizing ourselves with included: website development and hosting using AWS, interconnecting AWS services, AWS to LaunchPad communication, documentation for new sensors, and the incorporation of a mechanical design in our LaunchPad (water pump).
+<br><br>
+The challenges we encountered with the software included sending data to our shadow from AWS, which we did not do in any previous labs. This problem was solved by utilizing AWS CloudWatch logs to narrow down our error and then utilizing IAM to ensure proper permissions were given to our Lambda function to post to our shadow, not only read from it. Another issue regarding AWS, was LaunchPad’s inability to connect to the shadow due to an untraceable time defining error. We were only able to get past this error by creating new certificates and attaching them to our IoT shadow object. In graphing the values, we utilized Jupyter Notebooks from AWS Sagemaker, however this was difficult to integrate into AWS Lambda, since there was no way to directly run the notebooks from Lambda. Due to this issue, we were unable to have live data for the graphs that could be updated via the front end. Many of these solutions required AWS purchases, so we included them in our potential ideas. 
+<br><br>
+In order to receive temperature and humidity data from the DHT11 sensor we had to figure out how its single line serial communication worked. Although the format of the received signal was similar to the one in Lab3 remote control data, DHT11 also required a start signal to operate. We used the logic analyzer to determine whether our start signal was successful or not. In our first few trials we were unable to see any signals in the logic analyzer, however once we switched the GPIO pin to an input immediately after the start signal we were able to see the signal. After that we used GPIO interrupts to record the serial data from the sensor. Once we had all the data recorded, we were able to process it to get the values we needed.
+<br><br>
+While designing the peristaltic pump we tried a few different types of tubing. We purchased vinyl tubing from a hardware store however after some experimentation we concluded that it was not flexible enough. After doing some research online and looking at what commercial peristaltic pumps use for tubing, we decided to order silicone tubing online. Another difficulty we encountered was figuring out the radius of the inner pump. We 3D printed three different inner pumps and used the one that gave the best result.
+<br><br>
+Despite the challenges, we were able to enhance our final product with the addition of 3D printed mounts for the sensors and OLED display, and a protoboard circuit that contains all the required components (such as Stepper driver, ADC ICs etc.). Software additions included a record/visualization of values collected throughout the day for efficient monitoring and user reference.</p>
+          
+          
+          <img src = "OLED%20holder.PNG" width="400px;float:left;display:inline-block;">
+          <img src = "IMG_0888.png" width="400px;float:left;display:inline-block;">
+          <img src = "plant2.png" width="400px;margin-left:20%;float:left;display:inline-block;">
+          <img src = "circuit.png" width="400px;margin-left:20%;float:left;display:inline-block;">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+    
+</div> 
+    
+<div style="width:100%; display: inline-block;text-align: center; margin-bottom: 30px;margin-top: 0px;">
+    
+<div class="w3-container">
+  <button onclick="document.getElementById('id12').style.display='inline-block'" class="w3-button " style="background-color: transparent;"><h3><U>EEC 172 Embedded Systems Winter 2020 Best Project Winner!</U></h3></button>
+  <div id="id12" class="w3-modal">
+    <div class="w3-modal-content" style="width:750px;">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id12').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <img src = "bestproject.PNG" style ="width: 80%; padding: 10px;display: inline-block;">
+       
+      </div>
+    </div>
+  </div>
+</div>
+</div>    
+</div> 
+    
+
 </body>
     
+
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
